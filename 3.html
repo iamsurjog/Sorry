@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>please forgive me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #1a1a2e;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+    }
+    .button-group {
+      display: flex;
+      gap: 2rem;
+    }
+    button {
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    button#yes {
+      background: #21e6c1;
+      color: #222;
+    }
+    button#yes:hover {
+      background: #15c6a4;
+      transform: scale(1.05);
+    }
+    button#no {
+      background: #ff2e63;
+      color: #fff;
+    }
+    button#no:hover {
+      background: #c3073f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Please forgive me babe</h1>
+  <div class="button-group">
+    <button id="yes">Okay</button>
+    <button id="no">No</button>
+  </div>
+  <script>
+    document.getElementById('yes').onclick = function() {
+      window.location.href = '4.html';
+    };
+    document.getElementById('no').onclick = function() {
+      // Array of possible pages
+      const pages = ['1.html', '2.html', '3.html'];
+      // Pick a random index
+      const randomIndex = Math.floor(Math.random() * pages.length);
+      // Redirect
+      window.location.href = pages[randomIndex];
+    };
+  </script>
+</body>
+</html>
+
